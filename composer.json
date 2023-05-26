@@ -1,0 +1,22 @@
+{
+    "name": "lucas/php-basic-login-system",
+    "description": "Basic login and sign up system",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [ 
+            "src/settings.php",
+            "src/functions.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "ribeiro",
+            "email": "lucasribeiro1024b@gmail.com"
+        }
+    ],
+    "require": {}
+}
