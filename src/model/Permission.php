@@ -31,7 +31,17 @@ class Permission extends db
 
     public function getPermission($pageName)
     {
-        $value = array_search($pageName, array_column($this->permissions, 'page_name'));
+        $exceptions = ['login', 'logout'];
+
+        if (in_array($pageName, $exceptions)) {
+            return true;
+        }
+
+        $value = false;
+        if ($this->permissions !== false) {
+            $permittedPages = array_column($this->permissions, 'page_name');
+            $value          = array_search($pageName, $permittedPages);
+        }
 
         if ($value !== false) {
             return true;
