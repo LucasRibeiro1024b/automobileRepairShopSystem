@@ -8,6 +8,7 @@ class User extends db
     public $name;
     public $email;
     public $password_hash;
+    public $first_login;
 
     public function __construct()
     {

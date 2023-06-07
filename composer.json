@@ -18,5 +18,9 @@
             "email": "lucasribeiro1024b@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "require-dev": {
+    	"squizlabs/php_codesniffer": "3.*",
+        "phpmd/phpmd" : "@stable"
+    }
 }

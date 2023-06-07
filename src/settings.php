@@ -1,12 +1,12 @@
 <?php
 
-CONST DATABASE = [
-    'host' => 'localhost',
-    'port' => '3306',
-    'name' => 'project002',
-    'username' => 'root',
-    'password' => 'root',
-    'charset' => 'utf8'
+const DATABASE = [
+  'host'     => 'localhost',
+  'port'     => '3306',
+  'name'     => 'garagesystem',
+  'username' => 'root',
+  'password' => 'root',
+  'charset'  => 'utf8'
 ];
 
 // define constants for error logging

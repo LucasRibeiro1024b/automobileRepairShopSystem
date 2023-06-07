@@ -4,6 +4,7 @@ namespace App\core;
 
 use App\core\PageController;
 use App\controller\LoginController;
+use App\controller\RegisterController;
 
 class Routing
 {
@@ -24,22 +25,12 @@ class Routing
         $urlArray  = parse_url($this->url);
 
         $this->sections = explode('/', $urlArray['path']);
-        $this->page     = $this->sections[2] ?? null;
         $this->type     = $this->sections[1] ?? null;
-
-        // if (!isset($_SESSION['user_logged_in']) && !$_SESSION['user_logged_in'] === true) {
-        //     $this->type = 'login';
-        // }
+        $this->page     = $this->sections[2] ?? null;
     }
 
     public function render()
     {
-
-        // if (!isset($_SESSION['user_logged_in']) || !$_SESSION['user_logged_in']) {
-        //     header('Location: /view/login');
-        //     return 0;
-        // }
-
         switch ($this->type) {
             case '':
                 if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in']) {

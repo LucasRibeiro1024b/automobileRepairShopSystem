@@ -57,9 +57,9 @@ class db
 
     }
 
-    public function select($columns = '*', $where = '', $params = [])
+    public function select($columns = '*', $where = '', $params = [], $joins = '')
     {
-        $sql = "SELECT $columns FROM $this->table";
+        $sql = "SELECT $columns FROM $this->table $joins ";
 
         if (!empty($where)) {
             $sql .= " WHERE $where";
